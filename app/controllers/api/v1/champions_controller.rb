@@ -15,14 +15,13 @@ module Api
       # Método para obtener los detalles de un campeón en concreto
 
       def show
-        champion =Champion.find(params[:id])
+        champion = Champion.find(params[:id])
         render json: {
           status: 'success',
           message: 'Detalles del campeón:',
           data: champion
         }, status: :ok
       end
-
 
       def create
         # Referencia al modelo
